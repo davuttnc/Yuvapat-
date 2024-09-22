@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #343a40;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            text-align: center;
+            background-color: #007bff;
+        }
+        .sidebar a:hover {
+            background-color: #0056b3;
+        }
+        .sidebar .logout-btn {
+            background-color: #dc3545;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+        }
+        .sidebar .logout-btn:hover {
+            background-color: #c82333;
+        }
+        .main-content {
+            margin-left: 270px;
+            padding: 20px;
+            flex: 1;
+        }
+        .content-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .content-box h4 {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="sidebar">
+        <div>
+            <a href="/adminProfile">Admin Profiline Git</a>
+            <a href="/">Ana Sayfaya Git</a>
+            <a href="/HayvanSahiplenirme">Hayvan Sahiplendirme Sayfasına Git</a>
+            <a href="/KayipHayvanlar">Kayıp Hayvanlar Sayfasına Git</a>
+            <a href="/users">Kullanıcılar Sayfasına Git</a>
+            <a href="/IletisimForms">Mesajlar Sayfasına Git</a>
+            <a href="/Sikayetler">Şikayetler Sayfasına Git</a>
+        </div>
+        <form id="logout-form" class="form-inline">
+            <button type="submit" class="btn logout-btn">Çıkış Yap</button>
+        </form>
+    </nav>
+
+    <div class="main-content">
+        <!-- Ana içerik buraya gelecek -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('logout-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            
+            fetch('/logout', { // Sunucuya logout isteği gönderiliyor
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`, // Token'ı gönderiyoruz
+                    'Content-Type': 'application/json'
+                },
+                credentials: 'include',  // Eğer çerez (cookie) kullanıyorsanız
+            })
+            .then(response => {
+                if (response.ok) {
+                    localStorage.removeItem('token'); // veya sessionStorage
+                    window.location.href = '/login'; // Giriş sayfasına yönlendir
+                } else {
+                    console.error('Çıkış başarısız.');
+                }
+            })
+            .catch(error => {
+                console.error('Hata:', error);
+            });
+        });
+    </script>
+</body>
+</html>

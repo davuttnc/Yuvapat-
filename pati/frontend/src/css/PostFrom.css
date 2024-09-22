@@ -1,0 +1,39 @@
+/* PostForm.css */
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.1); /* Arka plan için hafif gölge */
+    padding: 1rem; /* Yüksek çözünürlük ekranlarda boşluk */
+  }
+  
+  .post-form {
+    margin: auto;
+    margin-top: 100px;
+    background: rgba(255, 255, 255, 0.329); /* Beyaz arka plan, %90 opaklık */
+    border: 1px solid #ddd; /* Hafif gri kenarlık */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Hafif gölge */
+    padding: 2rem; /* İç boşluk */
+    max-width: 800px; /* Maksimum genişlik */
+    width: 100%; /* Formun tüm genişlikte olmasını sağlar */
+  }
+  
+  .post-form h2 {
+    text-align: center;
+  }
+  
+  .post-form .form-control {
+    border-radius: 0.25rem; /* Köşeleri yuvarlat */
+  }
+  
+  .post-form .form-control:focus {
+    box-shadow: none; /* Fokuslanırken gölgeyi kaldır */
+    border-color: #007bff; /* Odaklanma rengini mavi yap */
+  }
+  
+  .post-form .btn-primary {
+    width: 100%; /* Butonun tam genişlikte olmasını sağlar */
+  }
+  

@@ -1,0 +1,121 @@
+/* Yükseklik ayarlamaları */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Kayıp Hayvanlar bölümü genel container */
+.kayip-hayvanlar {
+  min-height: 100%; /* En azından ekran yüksekliği kadar olacak */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Dikey hizalama */
+  justify-content: flex-start; /* Başlangıçta en üstten başlayacak */
+  padding-top: 20px; /* Üst boşluk */
+  padding-bottom: 20px; /* Alt boşluk */
+}
+
+/* Poster container */
+.poster-container {
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0; /* Başlangıçta görünmez */
+  transform: translateX(-100%); /* Soldan başlayacak */
+  transition: all 0.5s ease;
+}
+
+/* Poster resmi */
+.poster {
+  width: 100%;
+  height: auto;
+  border: none;
+}
+
+/* Hayvan kartları */
+.hayvan-card {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+  height: 160px;
+  opacity: 0; /* Başlangıçta görünmez */
+  transition: all 0.5s ease;
+}
+
+/* Hayvan resim container */
+.hayvan-resim-container {
+  width: 100px; /* Resim container'ının genişliği */
+  height: 100px; /* Kartın yüksekliğine uygun */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Hayvan resmi */
+.hayvan-resim {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Paylaşan kişi */
+.paylasan-kisi {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/* Paylaşan profil resmi */
+.paylasan-profil-resmi {
+  width: 19px; /* Profil resmi boyutu */
+  height: 19px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/* Paylaşan adı */
+.paylasan-adi {
+  font-weight: bold;
+}
+
+/* Hayvan metin */
+.hayvan-text {
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 5px;
+  margin-bottom: 15px;
+  height: calc(100% - 20px); /* Metin alanının kartın yüksekliğine göre ayarlanması */
+  overflow: hidden;
+  white-space: normal; /* Normal satır kaydırma */
+  word-wrap: break-word;
+}
+
+/* Konum */
+.konum {
+  float: left;
+  margin-right: 45px;
+}
+
+/* Daha fazla bilgi linki */
+.daha-fazla-bilgi {
+  color: #007bff;
+}
+
+/* Görsel ve animasyon görünürlüğü */
+.hayvan-card.visible,
+.poster-container.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Animasyonlar */
+.animate-left {
+  transform: translateX(-100%);
+}
+
+.animate-right {
+  transform: translateX(100%);
+}

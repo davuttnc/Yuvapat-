@@ -1,0 +1,33 @@
+/* Mesajlar.css */
+
+.container {
+  margin-top: 50px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .list-group-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+  }
+  
+  .list-group-item:hover {
+    background-color: #00000075;
+  }
+  
+  .list-group-item .d-flex {
+    align-items: center;
+  }
+  
+  .list-group-item h5 {
+    margin: 0;
+  }
+  
+  .list-group-item small {
+    color: #6c757d;
+  }
+  

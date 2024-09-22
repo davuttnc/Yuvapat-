@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kullanıcılar</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .profile-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <%- include('navbar') %>
+    <h1>Kullanıcılar</h1>
+    <a href="/HayvanSahiplenirme" class="btn btn-primary mb-3">Hayvan Sahiplendirme Sayfasına Git</a>
+    <a href="/KayipHayvanlar" class="btn btn-primary mb-3">KayipHayvanlar Sayfasına Git</a>
+    <a href="/" class="btn btn-primary mb-3">Panel Sayfasına Git</a>
+    <a href="/IletisimForms" class="btn btn-primary mb-3">mesajlar Sayfasına Git</a>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Profil Resmi</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>İşlemler</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% users.forEach(user => { %>
+          <tr>
+            <td><img src="/images/<%= user.profileImage %>" alt="Profil Resmi" class="profile-img"></td>
+            <td><%= user.username %></td>
+            <td><%= user.email %></td>
+            <td>
+              <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editModal-<%= user._id %>">Düzenle</button>
+              <button class="btn btn-danger btn-sm" onclick="deleteUser('<%= user._id %>')">Sil</button>
+            </td>
+          </tr>
+
+          <!-- Düzenleme Modali -->
+          <div class="modal fade" id="editModal-<%= user._id %>" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Kullanıcıyı Düzenle</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form action="/users/<%= user._id %>" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                      <label for="username">Kullanıcı Adı</label>
+                      <input type="text" class="form-control" id="username" name="username" value="<%= user.username %>" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" class="form-control" id="email" name="email" value="<%= user.email %>" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Şifre</label>
+                      <input type="password" class="form-control" id="password" name="password" value="<%= user.password %>">
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="profileImage">Profil Resmi</label>
+                      <input type="file" class="form-control-file" id="profileImage" name="profileImage">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Güncelle</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+function deleteUser(id) {
+  if (confirm('Bu kullanıcıyı silmek istediğinize emin misiniz?')) {
+    fetch(`/users/${id}`, {
+      method: 'DELETE',
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.message === 'Kullanıcı ve ona ait gönderiler başarıyla silindi.') {
+        location.reload();
+      } else {
+        alert('Kullanıcıyı silerken bir hata oluştu.');
+      }
+    })
+    .catch(error => {
+      console.error('Silme hatası:', error);
+    });
+  }
+}
+
+  </script>
+</body>
+</html>

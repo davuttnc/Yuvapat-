@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Panel</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5; /* Arka plan rengi */
+        }
+        .main-content {
+            margin-left: 220px;
+            padding: 20px;
+            flex: 1;
+        }
+        .content-box {
+            background-color: #fff; /* Kutu arka plan rengi */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .content-box h4 {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .stats > div {
+            flex: 1;
+            margin: 0 10px;
+        }
+        .user-count {
+            text-align: center;
+            font-size: 24px;
+        }
+        .user-count {
+            background-color: #e9ecef;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <%- include('navbar') %>
+        <div class="content-box">
+            <h4>Kullanıcı Sayısı</h4>
+            <div class="user-count" id="userCount">0</div>
+        </div>
+        <div class="content-box">
+            <h4>gelen mesaj  Sayısı</h4>
+            <div class="user-count" id="formCount">0</div>
+        </div>
+        <div class="content-box">
+            <h4>gelen şikeyet Sayısı</h4>
+            <div class="user-count" id="SikayetCount">0</div>
+        </div>
+    </div>
+
+    <!-- Bootstrap ve jQuery kütüphaneleri -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Kullanıcı sayısını çekmek için API çağrısı
+        fetch('/api/users/count')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('userCount').textContent = data.count;
+            })
+            .catch(error => {
+                console.error('Kullanıcı sayısını çekerken hata:', error);
+            });
+        fetch('/api/form/count')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('formCount').textContent = data.count;
+            })
+            .catch(error => {
+                console.error('mesjlar sayısını çekerken hata:', error);
+            });
+        fetch('/api/Sikayet/count')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('SikayetCount').textContent = data.count;
+            })
+            .catch(error => {
+                console.error('mesjlar sayısını çekerken hata:', error);
+            });
+
+    </script>
+</body>
+</html>

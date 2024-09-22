@@ -1,0 +1,201 @@
+/* Genel Stil Ayarları */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Yatay kaydırmayı engelle */
+}
+
+/* Arama Sayfası Stilleri */
+.arama-kutusu {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+
+#arama-baslik1{
+  font-size: 7rem;
+  color: #333;
+  margin-bottom: 1rem;
+  animation: slideInFromLeft 1s ease-out;
+}
+
+.arama-yazi1 {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+.arama-resim {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.arama-resim-animate {
+  animation: fadeInOut 2s infinite alternate;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* İletişim Sayfası Stilleri */
+.contact-form {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  animation: slideInFromLeft 1s ease-out;
+}
+
+.contact-form h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.input {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.btn {
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #e59400;
+}
+
+.kitty-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.kitty-image img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border: none;
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  animation: slideInFromRight 1s ease-out;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Blog Sayfası Stilleri */
+.blog-api-container {
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+}
+
+.arama-baslik-box {
+  width: 100%;
+  height: 50px;
+  background-color: #ffa500;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+
+.arama-baslik {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0;
+}
+
+/* Posterlerin büyük görünmesini sağlayacak stil ayarları */
+.poster {
+  width: 100%;
+  max-width: 100%; /* Maksimum genişlik sınırını %100 yaparak daha büyük görünmesini sağla */
+  height: auto; /* Yüksekliği otomatik olarak ayarla */
+  border: none; /* Çerçeveyi kaldır */
+  object-fit: cover; /* Resmi kapsayıcıya sığdır */
+  transition: transform 0.5s ease; /* Transform geçişi */
+  display: block;
+  margin: 0 auto; /* Kartı ortalamak için */
+}
+
+.poster-left, .poster-right {
+  animation: slideInFromLeft 1s ease-out; /* Soldan gelen kart animasyonu */
+  /* poster-right için geçiş ve animasyon süresi */
+}
+
+.poster-right {
+  animation: slideInFromRight 1s ease-out; /* Sağdan gelen kart animasyonu */
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Ekstra boşluk ekleyerek resimlerin yanında metni ortalayabilirsiniz */
+}
+
+.arama-yazi {
+  font-size: 1.25rem;
+  color: #555;
+  /* Metin ve resimler arasındaki boşluk için padding ekleyebilirsiniz */
+}
+
+.arama-yazi-animate {
+  animation: fadeInOut 3s infinite alternate;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animasyonlar */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

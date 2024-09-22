@@ -1,0 +1,307 @@
+[
+    {
+      "city": "Adana",
+      "districts": ["Seyhan", "Yüreğir", "Çukurova", "Karaisalı", "Pozantı"]
+    },
+    {
+      "city": "Adıyaman",
+      "districts": ["Adıyaman Merkez", "Kahta", "Gerger", "Samsat", "Besni"]
+    },
+    {
+      "city": "Afyonkarahisar",
+      "districts": ["Afyonkarahisar Merkez", "Sandıklı", "Dinar", "Bolvadin", "Çay"]
+    },
+    {
+      "city": "Ağrı",
+      "districts": ["Ağrı Merkez", "Doğubeyazıt", "Patnos", "Tuzluca", "Hamur"]
+    },
+    {
+      "city": "Aksaray",
+      "districts": ["Aksaray Merkez", "Sarıyahşi", "Güzelyurt", "Eskil", "Ortaköy"]
+    },
+    {
+      "city": "Amasya",
+      "districts": ["Amasya Merkez", "Merzifon", "Suluova", "Gümüşhacıköy", "Taşova"]
+    },
+    {
+      "city": "Ankara",
+      "districts": ["Çankaya", "Kızılay", "Mamak", "Sincan", "Keçiören"]
+    },
+    {
+      "city": "Antalya",
+      "districts": ["Antalya Merkez", "Muratpaşa", "Konyaaltı", "Lara", "Kepez"]
+    },
+    {
+      "city": "Artvin",
+      "districts": ["Artvin Merkez", "Hopa", "Şavşat", "Ardanuç", "Borçka"]
+    },
+    {
+      "city": "Aydın",
+      "districts": ["Aydın Merkez", "Söke", "Nazilli", "Kuşadası", "Didim"]
+    },
+    {
+      "city": "Balıkesir",
+      "districts": ["Balıkesir Merkez", "Ayvalık", "Edremit", "Bandırma", "Burhaniye"]
+    },
+    {
+      "city": "Bartın",
+      "districts": ["Bartın Merkez", "Amasra", "Kozcağız", "Ulus", "Kurucaşile"]
+    },
+    {
+      "city": "Batman",
+      "districts": ["Batman Merkez", "Beşiri", "Gercüş", "Kozluk", "Sason"]
+    },
+    {
+      "city": "Bayburt",
+      "districts": ["Bayburt Merkez", "Aydıntepe", "Demirözü", "Köprüçay", "Yurtbaşı"]
+    },
+    {
+      "city": "Bilecik",
+      "districts": ["Bilecik Merkez", "Bozüyük", "Söğüt", "Yenipazar", "Osmaneli"]
+    },
+    {
+      "city": "Bingöl",
+      "districts": ["Bingöl Merkez", "Genç", "Kiğı", "Yedisu", "Adaklı"]
+    },
+    {
+      "city": "Bitlis",
+      "districts": ["Bitlis Merkez", "Tatvan", "Hizan", "Ahlat", "Güroymak"]
+    },
+    {
+      "city": "Bolu",
+      "districts": ["Bolu Merkez", "Gerede", "Dörtdivan", "Mudurnu", "Yığılca"]
+    },
+    {
+      "city": "Burdur",
+      "districts": ["Burdur Merkez", "Ağlasun", "Çavdır", "Gölhisar", "Yeşilova"]
+    },
+    {
+      "city": "Bursa",
+      "districts": ["Bursa Merkez", "Osmangazi", "Yıldırım", "Nilüfer", "Gemlik"]
+    },
+    {
+      "city": "Çanakkale",
+      "districts": ["Çanakkale Merkez", "Ayvacık", "Gelibolu", "Lapseki", "Eceabat"]
+    },
+    {
+      "city": "Çankırı",
+      "districts": ["Çankırı Merkez", "Korgun", "Atkaracalar", "Orta", "Şabanözü"]
+    },
+    {
+      "city": "Çorum",
+      "districts": ["Çorum Merkez", "Alaca", "Sungurlu", "Osmancık", "İskilip"]
+    },
+    {
+      "city": "Denizli",
+      "districts": ["Denizli Merkez", "Pamukkale", "Merkezefendi", "Çivril", "Buldan"]
+    },
+    {
+      "city": "Diyarbakır",
+      "districts": ["Diyarbakır Merkez", "Sur", "Kayapınar", "Yenişehir", "Bismil"]
+    },
+    {
+      "city": "Düzce",
+      "districts": ["Düzce Merkez", "Akçakoca", "Yığılca", "Gümüşova", "Çilimli"]
+    },
+    {
+      "city": "Edirne",
+      "districts": ["Edirne Merkez", "Uzunköprü", "Lalapaşa", "Keşan", "Havsa"]
+    },
+    {
+      "city": "Elazığ",
+      "districts": ["Elazığ Merkez", "Keban", "Maden", "Palu", "Aricak"]
+    },
+    {
+      "city": "Erzincan",
+      "districts": ["Erzincan Merkez", "Üzümlü", "Refahiye", "Tercan", "Otlukbeli"]
+    },
+    {
+      "city": "Erzurum",
+      "districts": ["Erzurum Merkez", "Palandöken", "Yakutiye", "Aziziye", "Oltu"]
+    },
+    {
+      "city": "Eskişehir",
+      "districts": ["Eskişehir Merkez", "Odunpazarı", "Tepebaşı", "Sivrihisar", "Mahmudiye"]
+    },
+    {
+      "city": "Gaziantep",
+      "districts": ["Gaziantep Merkez", "Şahinbey", "Şehitkamil", "Şehitkardeşler", "Nizip"]
+    },
+    {
+      "city": "Giresun",
+      "districts": ["Giresun Merkez", "Eynesil", "Espiye", "Görele", "Alucra"]
+    },
+    {
+      "city": "Gümüşhane",
+      "districts": ["Gümüşhane Merkez", "Şiran", "Kelkit", "Torul", "Köse"]
+    },
+    {
+      "city": "Hakkari",
+      "districts": ["Hakkari Merkez", "Yüksekova", "Şemdinli", "Çukurca", "Hakkari"]
+    },
+    {
+      "city": "Hatay",
+      "districts": ["Antakya", "İskenderun", "Dörtyol", "Reyhanlı", "Payas"]
+    },
+    {
+      "city": "Iğdır",
+      "districts": ["Iğdır Merkez", "Aralık", "Tuzluca", "Karakoyunlu", "Halfeli"]
+    },
+    {
+      "city": "Isparta",
+      "districts": ["Isparta Merkez", "Eğirdir", "Yalvaç", "Şarkikaraağaç", "Senirkent"]
+    },
+    {
+      "city": "İstanbul",
+      "districts": ["Beşiktaş", "Kadıköy", "Şişli", "Fatih", "Beyoğlu"]
+    },
+    {
+      "city": "İzmir",
+      "districts": ["Konak", "Karşıyaka", "Buca", "Bornova", "Alsancak"]
+    },
+    {
+      "city": "Kahramanmaraş",
+      "districts": ["Kahramanmaraş Merkez", "Elbistan", "Afşin", "Türkoğlu", "Çağlayancerit"]
+    },
+    {
+      "city": "Karaman",
+      "districts": ["Karaman Merkez", "Ermenek", "Kazımkarabekir", "Sarıveliler", "Başyayla"]
+    },
+    {
+      "city": "Kars",
+      "districts": ["Kars Merkez", "Ardahan", "Selim", "Digor", "Kağızman"]
+    },
+    {
+      "city": "Kastamonu",
+      "districts": ["Kastamonu Merkez", "İnebolu", "Taşköprü", "Araç", "Cide"]
+    },
+    {
+      "city": "Kayseri",
+      "districts": ["Kayseri Merkez", "Kocasinan", "Melikgazi", "Talas", "Hacılar"]
+    },
+    {
+      "city": "Kırıkkale",
+      "districts": ["Kırıkkale Merkez", "Yahşihan", "Delice", "Karakeçili", "Bahşili"]
+    },
+    {
+      "city": "Kırklareli",
+      "districts": ["Kırklareli Merkez", "Vize", "Lüleburgaz", "Pınarhisar", "Kofçaz"]
+    },
+    {
+      "city": "Kırşehir",
+      "districts": ["Kırşehir Merkez", "Mucur", "Kaman", "Çiçekdağı", "Boztepe"]
+    },
+    {
+      "city": "Kocaeli",
+      "districts": ["Kocaeli Merkez", "İzmit", "Gebze", "Dilovası", "Derince"]
+    },
+    {
+      "city": "Konya",
+      "districts": ["Konya Merkez", "Selçuklu", "Meram", "Karatay", "Ereğli"]
+    },
+    {
+      "city": "Kütahya",
+      "districts": ["Kütahya Merkez", "Tavşanlı", "Simav", "Gediz", "Dumlupınar"]
+    },
+    {
+      "city": "Malatya",
+      "districts": ["Malatya Merkez", "Battalgazi", "Yeşilyurt", "Pütürge", "Akçadağ"]
+    },
+    {
+      "city": "Manisa",
+      "districts": ["Manisa Merkez", "Akhisar", "Salihli", "Saruhanlı", "Turgutlu"]
+    },
+    {
+      "city": "Mardin",
+      "districts": ["Mardin Merkez", "Kızıltepe", "Nusaybin", "Midyat", "Dargeçit"]
+    },
+    {
+      "city": "Mersin",
+      "districts": ["Mersin Merkez", "Tarsus", "Erdemli", "Anamur", "Silifke"]
+    },
+    {
+      "city": "Muğla",
+      "districts": ["Muğla Merkez", "Fethiye", "Marmaris", "Bodrum", "Dalaman"]
+    },
+    {
+      "city": "Muş",
+      "districts": ["Muş Merkez", "Malazgirt", "Varto", "Bulanık", "Korkut"]
+    },
+    {
+      "city": "Nevşehir",
+      "districts": ["Nevşehir Merkez", "Ürgüp", "Avanos", "Gülşehir", "Derinkuyu"]
+    },
+    {
+      "city": "Niğde",
+      "districts": ["Niğde Merkez", "Bor", "Ulukışla", "Çamardı", "Altunhisar"]
+    },
+    {
+      "city": "Ordu",
+      "districts": ["Ordu Merkez", "Fatsa", "Ünye", "Gölköy", "Korgan"]
+    },
+    {
+      "city": "Osmaniye",
+      "districts": ["Osmaniye Merkez", "Kadirli", "Düziçi", "Bahçe", "Sumbas"]
+    },
+    {
+      "city": "Rize",
+      "districts": ["Rize Merkez", "Artvin", "Çamlıhemşin", "Fındıklı", "Pazar"]
+    },
+    {
+      "city": "Sakarya",
+      "districts": ["Sakarya Merkez", "Adapazarı", "Serdivan", "Akyazı", "Erenler"]
+    },
+    {
+      "city": "Samsun",
+      "districts": ["Samsun Merkez", "Atakum", "Canik", "İlkadım", "Bafra"]
+    },
+    {
+      "city": "Şanlıurfa",
+      "districts": ["Şanlıurfa Merkez", "Siverek", "Halfeti", "Viranşehir", "Bozova"]
+    },
+    {
+      "city": "Siirt",
+      "districts": ["Siirt Merkez", "Tillo", "Pervari", "Eruh", "Şirvan"]
+    },
+    {
+      "city": "Sinop",
+      "districts": ["Sinop Merkez", "Boyabat", "Erfelek", "Durağan", "Türkeli"]
+    },
+    {
+      "city": "Sivas",
+      "districts": ["Sivas Merkez", "Kangal", "Zara", "Divriği", "Şarkışla"]
+    },
+    {
+      "city": "Tekirdağ",
+      "districts": ["Tekirdağ Merkez", "Çerkezköy", "Kapaklı", "Marmara Ereğlisi", "Saray"]
+    },
+    {
+      "city": "Tokat",
+      "districts": ["Tokat Merkez", "Niksar", "Erbaa", "Zile", "Reşadiye"]
+    },
+    {
+      "city": "Trabzon",
+      "districts": ["Trabzon Merkez", "Akçaabat", "Ortahisar", "Sürmene", "Maçka"]
+    },
+    {
+      "city": "Tunceli",
+      "districts": ["Tunceli Merkez", "Pertek", "Hozat", "Pülümür", "Ovacık"]
+    },
+    {
+      "city": "Şırnak",
+      "districts": ["Şırnak Merkez", "Cizre", "Silopi", "Uludere", "Beytüşşebap"]
+    },
+    {
+      "city": "Yalova",
+      "districts": ["Yalova Merkez", "Çınarcık", "Armutlu", "Termal", "Altınova"]
+    },
+    {
+      "city": "Yozgat",
+      "districts": ["Yozgat Merkez", "Sorgun", "Akdağmadeni", "Çekerek", "Sarıkaya"]
+    },
+    {
+      "city": "Zonguldak",
+      "districts": ["Zonguldak Merkez", "Ereğli", "Çaycuma", "Devrek", "Gökçebey"]
+    }
+  ]
+  

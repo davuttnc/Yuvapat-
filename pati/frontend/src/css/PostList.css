@@ -1,0 +1,197 @@
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.329); /* Beyaz arka plan, %90 opaklık */
+  border: 1px solid #ddd; 
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Hafif gölge */
+  padding: 2rem; /* İç boşluk */
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.search-bar {
+  width: 60%;
+  height: 50px;
+  border: 2px solid #d37e10; 
+
+
+}
+
+/* Kart görünümü */
+.post-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 15px;
+  background-color: #ee930a;
+  margin: 30px;
+}
+
+/* Profil bilgileri */
+.profile-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.profile-info img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.profile-image {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+
+.username {
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Hayvan türü */
+.animal-type {
+  font-size: 19px;
+  color: #000000;
+  border-bottom: 3px solid #f19305; 
+  margin-bottom: 10px;
+  float: right;
+}
+
+/* Post metni */
+.post-text {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/* Uzun metinler için genişletme */
+.expandable-text {
+  max-height: 80px; /* Genişletilmeden önceki maksimum yükseklik */
+  overflow: hidden; /* Taşma durumunda gizleme */
+  position: relative;
+}
+
+.expandable-text.expanded {
+  max-height: none; /* Genişletildiğinde sınırsız yükseklik */
+}
+
+.expand-toggle {
+  display: block;
+  margin-top: 10px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+/* Post resmi */
+.post-image {
+  max-width: 500px; /* Maksimum genişlik */
+  max-height: 250px; /* Maksimum yükseklik */
+  height: auto;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+/* Etkileşim butonları */
+.interaction-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.like-button {
+  display: flex;
+  align-items: center;
+  font-size: 19px;
+  color: #333;
+}
+
+.comment-button {
+  font-size: 12px;
+}
+
+.comment-button:hover{
+  font-size: 12px;
+  background-color: chocolate;
+}
+
+/* Yorum bölümü */
+.comments-section {
+  margin-top: 10px;
+  overflow-y: auto; /* Yorumları kaydırmak için */
+  max-height: 300px; /* Belirli bir yüksekliğe sahip */
+  border-top: 1px solid #ddd;
+}
+
+.comments-section.open {
+  display: block;
+}
+
+.comment-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.comment-textarea {
+  flex: 1;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.submit-comment-button {
+  font-size: 12px;
+}
+
+/* Yorumlar */
+.comments-list {
+  padding-top: 10px;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd; /* Yorumların altına çizgi ekledik */
+  padding-bottom: 5px; /* Yorumların altına boşluk ekledik */
+}
+
+.comment-profile-image {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.comment-username {
+  font-weight: bold;
+  margin-right: 5px;
+}
+.pagination {
+  display: flex;
+  justify-content: flex-end; /* Sayfalandırma düğmelerini sağa hizala */
+  gap: 10px; /* Düğmeler arasında boşluk ekle */
+  margin-top: 20px; /* Üstten boşluk ekle */
+}
+
+.pagination button {
+  margin: 0; /* Düğmeler arasında ek boşluk olmaması için */
+}
+
+.pagination span {
+  display: flex;
+  align-items: center;
+}

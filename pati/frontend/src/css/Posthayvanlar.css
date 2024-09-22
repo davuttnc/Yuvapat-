@@ -1,0 +1,119 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.arama-baslik1 {
+  font-size: 4rem;
+  color: #ffa500;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left; /* Sol tarafa hizalanmış */
+}
+
+.arama-yazi1 {
+  font-size: 1.2rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.blog-api-container {
+  padding: 40px 20px;
+}
+
+.poster {
+  width: 80%;
+  max-width: 300px;
+  height: auto;
+  border: none;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+}
+
+.poster-left {
+  animation: slideInLeft 1s ease forwards;
+}
+
+.poster-right {
+  animation: slideInRight 1s ease forwards;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.arama-baslik-box {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.arama-baslik {
+  font-size: 3rem;
+  color: #ffa500;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.arama-yazi {
+  font-size: 1.2rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.contact-form {
+  padding: 20px;
+  background-color: #f3ebcf;
+  border: 1px solid #dee2e6;
+  border-radius: 25px;
+  position: relative;
+  margin-top: 120px;
+}
+
+.kitty-image {
+  text-align: center;
+}
+
+.kitty-image img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+
+.contact-form h2 {
+  color: orange;
+}
+
+.btn {
+  border-radius: 25px;
+  background-color: orange;
+}
+
+.input {
+  border-radius: 35px;
+}

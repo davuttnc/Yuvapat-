@@ -1,0 +1,82 @@
+/* ChatPage.css */
+
+/* Genel stil */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Mesaj listesi stili */
+  .message-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    flex: 1;
+  }
+  
+  /* Her bir mesaj için stil */
+  .message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    max-width: 75%;
+  }
+  
+  /* Kullanıcının mesajları için stil */
+  .message-sent {
+    background-color: #007bff;
+    color: #fff;
+    margin-left: auto;
+    text-align: right;
+  }
+  
+  /* Diğer kullanıcıların mesajları için stil */
+  .message-received {
+    background-color: #f1f1f1;
+    color: #000;
+    text-align: left;
+  }
+  
+  /* Mesaj formu için stil */
+  .message-form {
+    display: flex;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+  }
+  
+  /* Mesaj girişi için stil */
+  .message-form input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  /* Gönder düğmesi için stil */
+  .message-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .message-form button:hover {
+    background-color: #0056b3;
+  }
+  

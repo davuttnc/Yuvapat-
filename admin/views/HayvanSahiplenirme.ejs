@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hayvan Sahiplendirme</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .post-img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+    .post-text {
+      overflow-wrap: break-word; /* Uzun kelimelerin veya metinlerin taşmasını önler */
+      word-break: break-word; /* Uzun kelimelerin alt satıra geçmesini sağlar */
+      white-space: pre-wrap; /* Boşluk ve satır sonlarına saygı gösterir */
+      max-width: 100%; /* Konteyner genişliğini aşmamasını sağlar */
+    }
+    .comment {
+      margin-top: 5px;
+      border-top: 1px solid #ddd;
+      padding-top: 5px;
+    }
+    .modal-body {
+      max-height: 400px; /* Modal yüksekliği */
+      overflow-y: auto; /* Kaydırma çubuğu */
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <%- include('navbar') %>
+    <a href="/KayipHayvanlar" class="btn btn-primary mb-3">KayipHayvanlar Sayfasına Git</a>
+    <a href="/" class="btn btn-primary mb-3">PANEL Sayfasına Git</a>
+    <a href="/users" class="btn btn-primary mb-3">Kullanıcılar Sayfasına Git</a>
+    <a href="/IletisimForms" class="btn btn-primary mb-3">mesajlar Sayfasına Git</a>
+    <h1>Hayvan Sahiplendirme Gönderileri</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Resimler</th>
+          <th>Cins</th>
+          <th>Metin</th>
+          <th>Paylaşan</th>
+          <th>Beğeniler</th>
+          <th>Yorumlar</th>
+          <th>Paylaşıldığı Tarih</th>
+          <th>İşlemler</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% posts.forEach(post => { %>
+          <tr>
+            <td>
+              <% if (post.images.length > 0) { %>
+                <img src="/<%= post.images[0].path %>" alt="Resim" class="post-img">
+              <% } %>
+            </td>
+            <td><%= post.cins %></td>
+            <td class="post-text"><%= post.text %></td>
+            <td>
+              <% if (post.postedBy) { %>
+                <%= post.postedBy.username %>
+              <% } else { %>
+                Bilinmeyen
+              <% } %>
+            </td>
+            <td>
+              <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#likesModal<%= post._id %>">Beğenileri Görüntüle</button>
+              <!-- Beğenileri Modal -->
+              <div class="modal fade" id="likesModal<%= post._id %>" tabindex="-1" role="dialog" aria-labelledby="likesModalLabel<%= post._id %>" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="likesModalLabel<%= post._id %>">Beğeniler</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <% if (post.likes.length > 0) { %>
+                        <% post.likes.forEach(like => { %>
+                          <% if (like) { %>
+                            <div class="comment">
+                              <%= like.username %>
+                              <button class="btn btn-danger btn-sm float-right" onclick="deleteLike('<%= post._id %>', '<%= like._id %>')">Sil</button>
+                            </div>
+                          <% } %>
+                        <% }) %>
+                      <% } else { %>
+                        Beğeni yok
+                      <% } %>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#commentsModal<%= post._id %>">Yorumları Görüntüle</button>
+              <!-- Yorumları Modal -->
+              <div class="modal fade" id="commentsModal<%= post._id %>" tabindex="-1" role="dialog" aria-labelledby="commentsModalLabel<%= post._id %>" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="commentsModalLabel<%= post._id %>">Yorumlar</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <% if (post.comments.length > 0) { %>
+                        <% post.comments.forEach(comment => { %>
+                          <div class="comment">
+                            <% if (comment.commentedBy) { %>
+                              <p><%= comment.text %> - <%= comment.commentedBy.username %></p>
+                              <button class="btn btn-danger btn-sm float-right" onclick="deleteComment('<%= post._id %>', '<%= comment._id %>')">Sil</button>
+                            <% } else { %>
+                              <p><%= comment.text %> - Bilinmeyen</p>
+                              <button class="btn btn-danger btn-sm float-right" onclick="deleteComment('<%= post._id %>', '<%= comment._id %>')">Sil</button>
+                            <% } %>
+                          </div>
+                        <% }) %>
+                      <% } else { %>
+                        Yorum yok
+                      <% } %>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td><%= post.createdAt.toDateString() %></td>
+            <td>
+              <button class="btn btn-danger btn-sm" onclick="deletePost('<%= post._id %>')">Sil</button>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Bootstrap ve jQuery kütüphaneleri -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Silme işlemi için JavaScript -->
+  <script>
+    function deletePost(postId) {
+      if (confirm('Bu gönderiyi silmek istediğinizden emin misiniz?')) {
+        fetch(`/posts/${postId}`, {
+          method: 'DELETE',
+        })
+        .then(response => response.json())
+        .then(data => {
+          alert(data.message);
+          if (data.message === 'Gönderi başarıyla silindi.') {
+            location.reload(); // Sayfayı yenileyerek güncellenmiş listeyi göster
+          }
+        })
+        .catch(error => {
+          console.error('Silme hatası:', error);
+          alert('Gönderiyi silme sırasında bir hata oluştu.');
+        });
+      }
+    }
+
+    function deleteLike(postId, likeId) {
+      if (confirm('Bu beğeniyi silmek istediğinizden emin misiniz?')) {
+        fetch(`/posts/${postId}/likes/${likeId}`, {
+          method: 'DELETE',
+        })
+        .then(response => response.json())
+        .then(data => {
+          alert(data.message);
+          if (data.message === 'Beğeni başarıyla silindi.') {
+            location.reload(); // Sayfayı yenileyerek güncellenmiş listeyi göster
+          }
+        })
+        .catch(error => {
+          console.error('Silme hatası:', error);
+          alert('Beğeniyi silme sırasında bir hata oluştu.');
+        });
+      }
+    }
+
+    function deleteComment(postId, commentId) {
+      if (confirm('Bu yorumu silmek istediğinizden emin misiniz?')) {
+        fetch(`/posts/${postId}/comments/${commentId}`, {
+          method: 'DELETE',
+        })
+        .then(response => response.json())
+        .then(data => {
+          alert(data.message);
+          if (data.message === 'Yorum başarıyla silindi.') {
+            location.reload(); // Sayfayı yenileyerek güncellenmiş listeyi göster
+          }
+        })
+        .catch(error => {
+          console.error('Silme hatası:', error);
+          alert('Yorumu silme sırasında bir hata oluştu.');
+        });
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.329); /* Beyaz arka plan, %90 opaklık */
+  border: 1px solid #ddd; 
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Hafif gölge */
+  padding: 2rem; /* İç boşluk */
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.search-bar {
+  width: 60%;
+  height: 50px;
+  border: 2px solid #d37e10; 
+
+
+}
+
+
+/* Kart görünümü */
+.post-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 15px;
+  background-color: #fff;
+}
+
+/* Profil bilgileri */
+.profile-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 12px;
+  cursor: pointer; /* Profil bilgisine tıklanabilirlik */
+}
+
+.profile-info img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+
+.profile-image {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.username {
+  font-size: 12px;
+  font-weight: bold;
+}
+.location-type {
+  font-size: 19px;
+  color: #000000;
+  border-bottom: 3px solid #f19305; 
+  margin-bottom: 10px;
+  float: right;
+}
+
+/* Post metni */
+.post-text {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/* Post resmi */
+.post-image {
+  max-width: 500px; /* Maksimum genişlik */
+  max-height: 250px; /* Maksimum yükseklik */
+  height: auto;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+/* Etkileşim butonları */
+.interaction-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.like-button {
+  display: flex;
+  align-items: center;
+  font-size: 19px;
+  color: #333;
+}
+
+.comment-button {
+  font-size: 12px;
+}
+
+/* Yorum bölümü */
+.comments-section {
+  margin-top: 10px;
+  overflow-y: auto; /* Yorumları kaydırmak için */
+  max-height: 300px; /* Belirli bir yüksekliğe sahip */
+  border-top: 1px solid #ddd;
+}
+
+.comment-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.comment-textarea {
+  flex: 1;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.submit-comment-button {
+  font-size: 12px;
+}
+
+/* Yorumlar */
+.comments-list {
+  padding-top: 10px;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.comment-profile-image {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.comment-username {
+  font-weight: bold;
+}
+.pagination {
+  display: flex;
+  justify-content: flex-end; /* Sayfalandırma düğmelerini sağa hizala */
+  gap: 10px; /* Düğmeler arasında boşluk ekle */
+  margin-top: 20px; /* Üstten boşluk ekle */
+}
+
+.pagination button {
+  margin: 0; /* Düğmeler arasında ek boşluk olmaması için */
+}
+
+.pagination span {
+  display: flex;
+  align-items: center;
+}
+/* Modal özel stiller */
+.modal-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.post-sikayet{
+  color: #000000;
+  font-size: 24px; /* Noktaların boyutu */
+  text-align: center;
+  float: right;
+  margin-left: 15px;
+}

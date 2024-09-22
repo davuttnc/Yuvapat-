@@ -1,0 +1,80 @@
+/* Navbar stilleri */
+.custom-navbar {
+  background-color: #f8f9fa; /* Navbar arka plan rengi */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Navbar altında hafif gölge */
+  padding: 10px 20px; /* Navbar içeriği için padding */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Diğer içeriklerin üzerinde olması için z-index değeri */
+}
+
+.custom-navbar .navbar-brand {
+  color: #ffa500; /* Navbar marka metin rengi */
+  font-weight: bold; /* Navbar marka metin kalınlığı */
+  font-size: 1.5rem; /* Marka metin boyutu */
+}
+
+.custom-navbar .navbar-nav {
+  align-items: center; /* Navbar menü öğelerini dikeyde ortala */
+}
+
+.custom-navbar .nav-link {
+  color: #495057; /* Menü bağlantı metin rengi */
+  margin: 0 15px; /* Menü bağlantıları arasındaki boşluk */
+  font-size: 1rem; /* Menü bağlantı metin boyutu */
+}
+
+.custom-navbar .nav-link:hover {
+  color: #007bff; /* Üzerine gelindiğinde menü bağlantı metin rengi */
+  text-decoration: none; /* Üzerine gelindiğinde altı çizili olmasın */
+}
+
+.custom-navbar .nav-item.active .nav-link {
+  border-bottom: 2px solid #007bff; /* Aktif menü bağlantısına alt border ekle */
+}
+
+.custom-navbar .navbar-toggler {
+  border: none; /* Navbar toggle kenarlığını kaldır */
+}
+
+.custom-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='%23007bff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  /* Navbar toggle simgesi rengi ve diğer özellikler */
+}
+
+.custom-navbar .form-control {
+  border-color: #ced4da; /* Arama kutusu kenar rengi */
+}
+
+.custom-navbar .form-control:focus {
+  border-color: #007bff; /* Arama kutusu odaklandığında kenar rengi */
+  box-shadow: none; /* Arama kutusu odaklandığında gölgeyi kaldır */
+}
+
+.custom-navbar .btn-outline-success {
+  color: #28a745; /* Arama butonu metin rengi */
+  border-color: #28a745; /* Arama butonu kenar rengi */
+}
+
+.custom-navbar .btn-outline-success:hover {
+  color: #fff; /* Üzerine gelindiğinde arama butonu metin rengi */
+  background-color: #28a745; /* Üzerine gelindiğinde arama butonu arka plan rengi */
+  border-color: #28a745; /* Üzerine gelindiğinde arama butonu kenar rengi */
+}
+
+.left-nav {
+  display: flex;
+  align-items: center; /* Menü öğelerini dikeyde ortala */
+}
+
+.right-nav {
+  display: flex;
+  align-items: center; /* Menü öğelerini dikeyde ortala */
+  margin-left: auto; /* Sağ tarafta hizala */
+}
+
+.navbar-brand .navbar-logo {
+  height: 50px; /* Logonun yüksekliği, ihtiyaca göre artırabilirsiniz */
+  width: 200px; /* Logonun genişliği otomatik olarak ayarlanır */
+}

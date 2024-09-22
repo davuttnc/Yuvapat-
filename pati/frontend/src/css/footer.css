@@ -1,0 +1,14 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #343a40; /* bg-dark sınıfına uygun renk */
+    padding: 10px 0;
+    border-top: 1px solid #dee2e6; /* İsteğe bağlı: üst sınır */
+  }
+  
+  .footer p {
+    margin: 0; /* Metinlerin düzgün hizalanması için */
+  }
+  
